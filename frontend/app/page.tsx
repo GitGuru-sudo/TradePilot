@@ -80,8 +80,8 @@ export default function LandingPage() {
                 />
                 <FeatureCard
                     icon={<TimerReset className="text-primary" />}
-                    title="Session-Aware Access"
-                    description="Recent authenticated sessions reopen the dashboard directly, while stale sessions are routed back through sign-in."
+                    title="Frictionless Entry"
+                    description="Move from landing page to dashboard in a smooth, guided flow designed for quick demos and reviewer walkthroughs."
                 />
             </div>
         </div>
