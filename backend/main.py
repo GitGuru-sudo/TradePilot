@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.routes_orders import router as order_router
 from api.routes_health import router as health_router
+from auth.firebase_auth import initialize_firebase
 from config.settings import settings
 from utils.logger import logger
 
@@ -25,6 +26,7 @@ app.include_router(order_router, prefix="/api")
 @app.on_event("startup")
 async def startup_event():
     logger.info("Starting up the Binance Trading Bot API...")
+    initialize_firebase()
 
 @app.on_event("shutdown")
 async def shutdown_event():
