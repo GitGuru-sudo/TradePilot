@@ -1,13 +1,13 @@
 FROM node:20-alpine AS deps
 
-WORKDIR /app
+WORKDIR /app/frontend
 
-COPY package.json package-lock.json ./
+COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci
 
 FROM node:20-alpine AS builder
 
-WORKDIR /app
+WORKDIR /app/frontend
 
 ARG NEXT_PUBLIC_API_URL=http://localhost:8000
 ARG NEXT_PUBLIC_FIREBASE_API_KEY=""
@@ -28,26 +28,26 @@ ENV NEXT_PUBLIC_FIREBASE_APP_ID=${NEXT_PUBLIC_FIREBASE_APP_ID}
 ENV NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=${NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID}
 ENV NEXT_PUBLIC_MOCK_MODE=${NEXT_PUBLIC_MOCK_MODE}
 
-COPY --from=deps /app/node_modules ./node_modules
-COPY . .
+COPY --from=deps /app/frontend/node_modules ./node_modules
+COPY frontend/ .
 
 RUN npm run build
 
 FROM node:20-alpine AS runner
 
-WORKDIR /app
+WORKDIR /app/frontend
 
 ENV NODE_ENV=production
 ENV HOSTNAME=0.0.0.0
 ENV PORT=3000
 ENV NEXT_PUBLIC_MOCK_MODE=true
 
-COPY package.json package-lock.json ./
+COPY frontend/package.json frontend/package-lock.json ./
 RUN npm ci --omit=dev
 
-COPY --from=builder /app/.next ./.next
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/next.config.js ./next.config.js
+COPY --from=builder /app/frontend/.next ./.next
+COPY --from=builder /app/frontend/public ./public
+COPY --from=builder /app/frontend/next.config.js ./next.config.js
 
 EXPOSE 3000
 

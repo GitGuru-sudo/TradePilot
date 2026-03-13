@@ -5,7 +5,7 @@ services:
     plan: free
     region: oregon
     dockerfilePath: ./backend/Dockerfile
-    dockerContext: ./backend
+    dockerContext: .
     healthCheckPath: /health
     autoDeployTrigger: commit
     envVars:
@@ -24,7 +24,7 @@ services:
       - key: SUPABASE_SERVICE_ROLE_KEY
         sync: false
       - key: PROJECT_NAME
-        value: Binance Futures Trading Bot
+        value: TradePilot
       - key: BACKEND_CORS_ORIGINS
         sync: false
       - key: SECRET_KEY
@@ -36,7 +36,7 @@ services:
     plan: free
     region: oregon
     dockerfilePath: ./frontend/Dockerfile
-    dockerContext: ./frontend
+    dockerContext: .
     autoDeployTrigger: commit
     envVars:
       - key: NEXT_PUBLIC_API_URL
