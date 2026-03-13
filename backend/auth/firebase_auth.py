@@ -14,17 +14,34 @@ def _strip_wrapping_quotes(value: str) -> str:
     return cleaned
 
 
+def _normalize_private_key(private_key: str) -> str:
+    normalized = _strip_wrapping_quotes(private_key)
+    normalized = normalized.replace("\\r\\n", "\n").replace("\\n", "\n")
+    normalized = normalized.replace("\r\n", "\n").strip()
+    return normalized
+
+
+def _normalize_service_account_info(service_account_info: dict) -> dict:
+    normalized_info = dict(service_account_info)
+    private_key = normalized_info.get("private_key")
+
+    if isinstance(private_key, str):
+        normalized_info["private_key"] = _normalize_private_key(private_key)
+
+    return normalized_info
+
+
 def _load_service_account_info(raw_value: str) -> dict | None:
     config_str = _strip_wrapping_quotes(raw_value)
     if not config_str.startswith("{"):
         return None
 
     try:
-        return json.loads(config_str)
+        return _normalize_service_account_info(json.loads(config_str))
     except json.JSONDecodeError:
         # Some `.env` loaders preserve malformed escape sequences from PEM blocks.
         normalized = re.sub(r'\\(?!["\\/bfnrtu])', r'\\n', config_str)
-        return json.loads(normalized)
+        return _normalize_service_account_info(json.loads(normalized))
 
 def initialize_firebase():
     try:
@@ -45,7 +62,12 @@ def initialize_firebase():
             firebase_admin.initialize_app(cred)
             logger.info("Firebase Admin SDK initialized successfully from file path.")
     except Exception as e:
-        logger.error(f"Error initializing Firebase Admin SDK: {e}")
+        logger.error(
+            "Error initializing Firebase Admin SDK: "
+            f"{e}. If this is running on Render, confirm that "
+            "FIREBASE_SERVICE_ACCOUNT_JSON contains valid JSON and that "
+            "the private_key preserves newline characters."
+        )
 
 def verify_token(id_token: str):
     try:

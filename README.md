@@ -197,6 +197,7 @@ This repo includes `render.yaml` for a two-service deployment:
 - Frontend runs as a Docker-based Next.js web service
 - Backend CORS must include your Render frontend URL
 - Render provides service environment variables to Docker builds as build arguments, which is why the frontend Dockerfile accepts the `NEXT_PUBLIC_*` variables
+- For `FIREBASE_SERVICE_ACCOUNT_JSON`, paste the full service account JSON as one value. If the `private_key` is stored with literal `\\n` sequences, the backend now normalizes that automatically during startup
 
 ## Reviewer-friendly summary
 
