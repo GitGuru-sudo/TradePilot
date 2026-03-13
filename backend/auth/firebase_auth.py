@@ -5,6 +5,7 @@ from utils.logger import logger
 import os
 import json
 import re
+import base64
 
 
 def _strip_wrapping_quotes(value: str) -> str:
@@ -33,6 +34,15 @@ def _normalize_service_account_info(service_account_info: dict) -> dict:
 
 def _load_service_account_info(raw_value: str) -> dict | None:
     config_str = _strip_wrapping_quotes(raw_value)
+    
+    try:
+        decoded_bytes = base64.b64decode(config_str)
+        decoded_str = decoded_bytes.decode('utf-8')
+        if decoded_str.startswith("{"):
+            config_str = decoded_str
+    except Exception:
+        pass
+
     if not config_str.startswith("{"):
         return None
 
