@@ -9,7 +9,8 @@ class Settings(BaseSettings):
     USE_MOCK_BINANCE: bool = False
 
     # Firebase
-    FIREBASE_SERVICE_ACCOUNT_JSON: str  # Path to JSON file OR raw JSON string
+    FIREBASE_SERVICE_ACCOUNT_JSON: str = "{}"
+    USE_MOCK_FIREBASE: bool = False
     
     # Supabase
     SUPABASE_URL: str
@@ -20,7 +21,7 @@ class Settings(BaseSettings):
     # (Optional if we only use Firebase Admin SDK for verification, 
     # but good to have if we issue our own tokens later)
     SECRET_KEY: str = "your-secret-key-for-local-dev"
-    BACKEND_CORS_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000"
+    BACKEND_CORS_ORIGINS: str = "http://localhost:3000,http://127.0.0.1:3000,https://internship-frontend-1.onrender.com"
     
     PROJECT_NAME: str = "Binance Futures Trading Bot"
 

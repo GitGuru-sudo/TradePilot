@@ -7,12 +7,21 @@ from utils.logger import logger
 security = HTTPBearer()
 
 async def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security)):
-    if not firebase_admin._apps and not initialize_firebase():
-        logger.error("Firebase is not initialized. Backend configuration is invalid.")
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Authentication service is unavailable due to server misconfiguration.",
-        )
+    from config.settings import settings
+    
+    # Initialize Firebase if not already done
+    if not firebase_admin._apps:
+        initialize_firebase()
+    
+    # If using mock mode, allow any token
+    if settings.USE_MOCK_FIREBASE:
+        token = credentials.credentials
+        logger.info(f"Mock mode enabled - accepting token: {token[:10]}...")
+        return {
+            "user_id": "mock_user",
+            "email": "mock@example.com",
+            "name": "Mock User"
+        }
 
     token = credentials.credentials
     decoded_token = verify_token(token)

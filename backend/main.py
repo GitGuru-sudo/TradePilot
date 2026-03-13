@@ -26,7 +26,11 @@ app.include_router(order_router, prefix="/api")
 @app.on_event("startup")
 async def startup_event():
     logger.info("Starting up the Binance Trading Bot API...")
-    initialize_firebase()
+    from config.settings import settings
+    if settings.USE_MOCK_FIREBASE:
+        logger.info("Running in mock Firebase mode.")
+    else:
+        initialize_firebase()
 
 @app.on_event("shutdown")
 async def shutdown_event():

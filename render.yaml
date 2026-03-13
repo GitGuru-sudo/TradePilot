@@ -18,15 +18,17 @@ services:
       - key: USE_MOCK_BINANCE
         value: "True"
       - key: FIREBASE_SERVICE_ACCOUNT_JSON
-        sync: false
+        value: "{}"
+      - key: USE_MOCK_FIREBASE
+        value: "True"
       - key: SUPABASE_URL
-        sync: false
+        value: "https://mock.supabase.co"
       - key: SUPABASE_SERVICE_ROLE_KEY
-        sync: false
+        value: "mock_key"
       - key: PROJECT_NAME
         value: TradePilot
       - key: BACKEND_CORS_ORIGINS
-        sync: false
+        value: "http://localhost:3000,https://internship-frontend-1.onrender.com"
       - key: SECRET_KEY
         generateValue: true
 
