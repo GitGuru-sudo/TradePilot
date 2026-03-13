@@ -1,0 +1,59 @@
+services:
+  - type: web
+    name: internship-backend
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: BINANCE_API_KEY
+        value: mock
+      - key: BINANCE_API_SECRET
+        value: mock
+      - key: BINANCE_TESTNET
+        value: "True"
+      - key: USE_MOCK_BINANCE
+        value: "True"
+      - key: FIREBASE_SERVICE_ACCOUNT_JSON
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: PROJECT_NAME
+        value: Binance Futures Trading Bot
+      - key: BACKEND_CORS_ORIGINS
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+
+  - type: web
+    name: internship-frontend
+    runtime: docker
+    plan: free
+    region: oregon
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    autoDeployTrigger: commit
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        sync: false
+      - key: NEXT_PUBLIC_MOCK_MODE
+        value: "true"
+      - key: NEXT_PUBLIC_FIREBASE_API_KEY
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_APP_ID
+        sync: false
+      - key: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+        sync: false
