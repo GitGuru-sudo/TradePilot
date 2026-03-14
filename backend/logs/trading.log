@@ -230,3 +230,16 @@ RECENT TEST EXECUTION - LIVE LIMIT ORDER
 2026-03-14 10:50:33,716 - trading_bot - INFO - Binance Client initialized in MOCK mode.
 2026-03-14 10:50:44,671 - trading_bot - INFO - Binance Client initialized in MOCK mode.
 2026-03-14 10:52:28,608 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:55:12,368 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:55:17,346 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:55:19,577 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-14 10:55:19,678 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-14 11:03:43,462 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing MARKET BUY order for BTCUSDT
+2026-03-14 11:03:43,467 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.04, 'price': None, 'mode': 'mock'}
+2026-03-14 11:03:43,473 - trading_bot - INFO - Binance futures order response: {'orderId': '1572bbdd-90ec-42ab-b351-7bde69f08877', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'MARKET', 'side': 'BUY', 'origQty': 0.04, 'price': 65000.0, 'avgPrice': 65000.0, 'executedQty': 0.04, 'updateTime': 1773466423472}
+2026-03-14 11:03:43,590 - trading_bot - INFO - Order saved to Supabase: 1572bbdd-90ec-42ab-b351-7bde69f08877
+2026-03-14 11:03:59,831 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT SELL order for BTCUSDT
+2026-03-14 11:03:59,831 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.002, 'price': 999.0, 'mode': 'mock'}
+2026-03-14 11:03:59,833 - trading_bot - INFO - Binance futures order response: {'orderId': '1e16d21e-0d46-4d1f-93d8-87fbe3e7aa81', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'LIMIT', 'side': 'SELL', 'origQty': 0.002, 'price': 999.0, 'avgPrice': 999.0, 'executedQty': 0.002, 'updateTime': 1773466439833}
+2026-03-14 11:03:59,917 - trading_bot - INFO - Order saved to Supabase: 1e16d21e-0d46-4d1f-93d8-87fbe3e7aa81
+2026-03-14 11:04:36,228 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
