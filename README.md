@@ -1,6 +1,7 @@
 # TradePilot - Binance Futures Trading Bot
 
-> **Demo Video**: <video controls src="20260314-0533-01.7505395.mp4" title="Title"></video>
+Watch the demo here:  
+https://drive.google.com/file/d/1D-DpThZrZ_GigwvjyKS4tPnFRVtczA3d/view?usp=sharing
 
 ## Overview
 
