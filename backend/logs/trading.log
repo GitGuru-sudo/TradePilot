@@ -1,0 +1,232 @@
+================= TRADING BOT LOG - Sample Orders =================
+
+======================== MARKET ORDER (BUY) ========================
+2024-01-15 14:30:22,100 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2024-01-15 14:30:45,123 - trading_bot - INFO - CLI order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None}
+2024-01-15 14:30:45,234 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'mode': 'mock'}
+2024-01-15 14:30:46,345 - trading_bot - INFO - Binance futures order response: {'orderId': '12345678901234567890', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'MARKET', 'side': 'BUY', 'origQty': 0.001, 'price': None, 'avgPrice': '45230.50', 'executedQty': 0.001, 'updateTime': 1705338646345}
+Order placed successfully - MARKET BUY 0.001 BTCUSDT at avg price 45230.50
+
+======================== LIMIT ORDER (SELL) ========================
+2024-01-15 14:35:20,456 - trading_bot - INFO - CLI order request: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 2500.0}
+2024-01-15 14:35:20,567 - trading_bot - INFO - Binance futures order request: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 2500.0, 'mode': 'mock'}
+2024-01-15 14:35:21,678 - trading_bot - INFO - Binance futures order response: {'orderId': '98765432109876543210', 'symbol': 'ETHUSDT', 'status': 'FILLED', 'type': 'LIMIT', 'side': 'SELL', 'origQty': 0.01, 'price': 2500.0, 'avgPrice': '2500.0', 'executedQty': 0.01, 'updateTime': 1705338921678}
+Order placed successfully - LIMIT SELL 0.01 ETHUSDT at price 2500.0
+
+===================================================================
+RECENT TEST EXECUTION - LIVE MARKET ORDER
+===================================================================
+2026-03-14 10:49:15,227 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:49:15,240 - trading_bot - INFO - CLI order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None}
+2026-03-14 10:49:15,240 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'mode': 'mock'}
+2026-03-14 10:49:15,240 - trading_bot - INFO - Binance futures order response: {'orderId': '74a8e012-cbe4-4309-8079-50ff9bff6e7c', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'MARKET', 'side': 'BUY', 'origQty': 0.001, 'executedQty': 0.001, 'avgPrice': 65000.0, 'updateTime': 1773465555240}
+✓ Order placed successfully - MARKET BUY 0.001 BTCUSDT at avg price 65000.0
+
+===================================================================
+RECENT TEST EXECUTION - LIVE LIMIT ORDER
+===================================================================
+2026-03-14 10:49:28,803 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:49:28,894 - trading_bot - INFO - CLI order request: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 2500.0}
+2026-03-14 10:49:28,896 - trading_bot - INFO - Binance futures order request: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 2500.0, 'mode': 'mock'}
+2026-03-14 10:49:28,898 - trading_bot - INFO - Binance futures order response: {'orderId': '92acc550-b0fe-459b-b983-205f574c974b', 'symbol': 'ETHUSDT', 'status': 'FILLED', 'type': 'LIMIT', 'side': 'SELL', 'origQty': 0.01, 'price': 2500.0, 'avgPrice': 2500.0, 'executedQty': 0.01, 'updateTime': 1773465568898}
+✓ Order placed successfully - LIMIT SELL 0.01 ETHUSDT at price 2500.0
+
+===================================================================
+2026-03-13 17:20:35,227 - trading_bot - ERROR - Error initializing Supabase client: Invalid API key
+2026-03-13 17:24:10,994 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 17:24:11,600 - trading_bot - ERROR - Error initializing Supabase client: Client.__init__() got an unexpected keyword argument 'proxy'
+2026-03-13 17:26:14,431 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 17:28:09,593 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 17:28:12,473 - trading_bot - ERROR - Error parsing FIREBASE_SERVICE_ACCOUNT_JSON as JSON: Invalid \escape: line 1 column 1346 (char 1345)
+2026-03-13 17:28:12,474 - trading_bot - WARNING - Firebase credentials file not found at {"type":"service_account","project_id":"tradepilot-6c","private_key_id":"94f8d9d9832300ad1bc247bd694211d74e2dbf59","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMGQD/QDsJHRw7\nbN0DYIMdtm2Rft3TRsHVss153T/DFJTj1Q5BSl6hIEHb1yrbMeKHHDaQsHpVdtQm\nKBE9XCh/8j5eA/2Ea1FzcSy11qAPdbLYOdYQHif//yfwGOJtO4B5FfLE20cw7kq7\n65HCVzWjDL3wTmna5gp2fH+dZylgMVDUe52xc1QjOnfvGurSWuoOyaOPulGUSaI3\n92I/GavLQ5xdoSDdSRnq6FeUHUwbUd2wArXrns/UxOz6Uj3JvlWVz0l5QmnAcrxp\n+sRkXKPaZ/rQIBzk3ZFO2tSV8isKpAKr43/P5dO8TkGJtqaKQA0+CUGNVASa0mLk\ncM6EPE1jAgMBAAECggEAA99flPhHhns+a2Q751H/+uLYvl99XwJjMCZV3r+Tc6Si\n1JXY0OVT2VPO3Bh/kCwoo66l3GX01EVObjDpbtQeUpsqkscZmtcccwfNNOAPJmvx\nykeCp8iisqlJPTWDqlXsMJ/5fMG6XpPO6DTmjZzxABiATBx4xrYBsdDX7QklkFUm\nf6Ugryg/4yrJ+R0HMloo94A9KddaMIbQI0NqHLwrnORtQGuTvNMvyt6u9LPN/Mcw\nKXTfA1BbaeE6KM7zPr0VNPBSglGIhleZCENM1blfuYfLElsAK+NJlS3juQQik55+\nV23BIj+/iZSmlhpsHPxm8fWOMrApuqltPjdqurNIFQKBgQD8KAE1KLc4luvevotW\nsP5vLLw2RT1pOrRrN38UFl63LPBolvDZxN5b8dmT+ouMy5ytwoICxuEKpSg8LvP5\nVq9uAyE2SoF1HHAaG52VlbhztVSJPyIuSbsCZffhFzXEbfo3OQHBxahWpY2qOwbA\ndcMjhSOmV9pLGMmoiLpMtwVQBQKBgQDPNXWAqk4p34ucMeYVVrYSKirvfNHtAcdP\nfBWdsoCfYAqAFSkXWoRZSmGprwd3V7NYw2U469hH3XDVBTH+hH1diEcMJ2/Fn/h4\nIZ8k66BJfJE1oJ+I7czsEq8XirSpXVf4I3+8L7ug17eZ7nDbmXol3XBUpejPDrbp\n/OBpsM1sRwKBgQCV7VdiezYNwLa4N0V0I0L1aXzzK9Iq2kviIBpAIFjqwx6ioXTN\lt+7fZ6n/OWyrnIXYrqY2hV+ldrJhgVscJ1YZSX/OOemcWU6MMdO5LnKmruL62zw\nZsh50ZVEUd+XTujiotOnmlXQRxlnaTdHgf2oBga/ZicWVcO5oKpc6MmQ3QKBgQCD\ncREBtobwzwq74Xdnz+KdcTxdQRvVscwiIr9/kq0+7GicyU+Qre3IyoNbZVliHjL5\nurFqQ0mmhNU/fBUztA3mmD0he57OiWTPp9xRSlsaYremgibRcLAOjOefEnD6Aul7\n0eEEmm72YADq17Olyh0PCgJo3/nn5xinI6+ju/EDnwKBgQDw5oKaJ1fjue8eM9Qp\nrgSUw8hGqfI7F5uRPUQttEU7lsq8KB3n8lBZGviauUTal9nahPFl/+5pfi8SZYCM\nIJLnXj+/8nDMIgx5nP3zbvHiyih5MnYH1dq1yAtPJxwc4zMv6VnKZD0kJQYBDlYC\nGDXapj1+9RAsgbxxODqArelChg==\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-fbsvc@tradepilot-6c.iam.gserviceaccount.com","client_id":"118194619413784328306","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tradepilot-6c.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+2026-03-13 17:28:15,129 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 17:28:17,558 - trading_bot - ERROR - Error parsing FIREBASE_SERVICE_ACCOUNT_JSON as JSON: Invalid \escape: line 1 column 1346 (char 1345)
+2026-03-13 17:28:17,559 - trading_bot - WARNING - Firebase credentials file not found at {"type":"service_account","project_id":"tradepilot-6c","private_key_id":"94f8d9d9832300ad1bc247bd694211d74e2dbf59","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMGQD/QDsJHRw7\nbN0DYIMdtm2Rft3TRsHVss153T/DFJTj1Q5BSl6hIEHb1yrbMeKHHDaQsHpVdtQm\nKBE9XCh/8j5eA/2Ea1FzcSy11qAPdbLYOdYQHif//yfwGOJtO4B5FfLE20cw7kq7\n65HCVzWjDL3wTmna5gp2fH+dZylgMVDUe52xc1QjOnfvGurSWuoOyaOPulGUSaI3\n92I/GavLQ5xdoSDdSRnq6FeUHUwbUd2wArXrns/UxOz6Uj3JvlWVz0l5QmnAcrxp\n+sRkXKPaZ/rQIBzk3ZFO2tSV8isKpAKr43/P5dO8TkGJtqaKQA0+CUGNVASa0mLk\ncM6EPE1jAgMBAAECggEAA99flPhHhns+a2Q751H/+uLYvl99XwJjMCZV3r+Tc6Si\n1JXY0OVT2VPO3Bh/kCwoo66l3GX01EVObjDpbtQeUpsqkscZmtcccwfNNOAPJmvx\nykeCp8iisqlJPTWDqlXsMJ/5fMG6XpPO6DTmjZzxABiATBx4xrYBsdDX7QklkFUm\nf6Ugryg/4yrJ+R0HMloo94A9KddaMIbQI0NqHLwrnORtQGuTvNMvyt6u9LPN/Mcw\nKXTfA1BbaeE6KM7zPr0VNPBSglGIhleZCENM1blfuYfLElsAK+NJlS3juQQik55+\nV23BIj+/iZSmlhpsHPxm8fWOMrApuqltPjdqurNIFQKBgQD8KAE1KLc4luvevotW\nsP5vLLw2RT1pOrRrN38UFl63LPBolvDZxN5b8dmT+ouMy5ytwoICxuEKpSg8LvP5\nVq9uAyE2SoF1HHAaG52VlbhztVSJPyIuSbsCZffhFzXEbfo3OQHBxahWpY2qOwbA\ndcMjhSOmV9pLGMmoiLpMtwVQBQKBgQDPNXWAqk4p34ucMeYVVrYSKirvfNHtAcdP\nfBWdsoCfYAqAFSkXWoRZSmGprwd3V7NYw2U469hH3XDVBTH+hH1diEcMJ2/Fn/h4\nIZ8k66BJfJE1oJ+I7czsEq8XirSpXVf4I3+8L7ug17eZ7nDbmXol3XBUpejPDrbp\n/OBpsM1sRwKBgQCV7VdiezYNwLa4N0V0I0L1aXzzK9Iq2kviIBpAIFjqwx6ioXTN\lt+7fZ6n/OWyrnIXYrqY2hV+ldrJhgVscJ1YZSX/OOemcWU6MMdO5LnKmruL62zw\nZsh50ZVEUd+XTujiotOnmlXQRxlnaTdHgf2oBga/ZicWVcO5oKpc6MmQ3QKBgQCD\ncREBtobwzwq74Xdnz+KdcTxdQRvVscwiIr9/kq0+7GicyU+Qre3IyoNbZVliHjL5\nurFqQ0mmhNU/fBUztA3mmD0he57OiWTPp9xRSlsaYremgibRcLAOjOefEnD6Aul7\n0eEEmm72YADq17Olyh0PCgJo3/nn5xinI6+ju/EDnwKBgQDw5oKaJ1fjue8eM9Qp\nrgSUw8hGqfI7F5uRPUQttEU7lsq8KB3n8lBZGviauUTal9nahPFl/+5pfi8SZYCM\nIJLnXj+/8nDMIgx5nP3zbvHiyih5MnYH1dq1yAtPJxwc4zMv6VnKZD0kJQYBDlYC\nGDXapj1+9RAsgbxxODqArelChg==\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-fbsvc@tradepilot-6c.iam.gserviceaccount.com","client_id":"118194619413784328306","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tradepilot-6c.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+2026-03-13 17:28:17,720 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 17:29:13,497 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 17:29:16,365 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 17:29:18,899 - trading_bot - ERROR - Error parsing FIREBASE_SERVICE_ACCOUNT_JSON as JSON: Invalid \escape: line 1 column 1346 (char 1345)
+2026-03-13 17:29:18,900 - trading_bot - WARNING - Firebase credentials file not found at {"type":"service_account","project_id":"tradepilot-6c","private_key_id":"94f8d9d9832300ad1bc247bd694211d74e2dbf59","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMGQD/QDsJHRw7\nbN0DYIMdtm2Rft3TRsHVss153T/DFJTj1Q5BSl6hIEHb1yrbMeKHHDaQsHpVdtQm\nKBE9XCh/8j5eA/2Ea1FzcSy11qAPdbLYOdYQHif//yfwGOJtO4B5FfLE20cw7kq7\n65HCVzWjDL3wTmna5gp2fH+dZylgMVDUe52xc1QjOnfvGurSWuoOyaOPulGUSaI3\n92I/GavLQ5xdoSDdSRnq6FeUHUwbUd2wArXrns/UxOz6Uj3JvlWVz0l5QmnAcrxp\n+sRkXKPaZ/rQIBzk3ZFO2tSV8isKpAKr43/P5dO8TkGJtqaKQA0+CUGNVASa0mLk\ncM6EPE1jAgMBAAECggEAA99flPhHhns+a2Q751H/+uLYvl99XwJjMCZV3r+Tc6Si\n1JXY0OVT2VPO3Bh/kCwoo66l3GX01EVObjDpbtQeUpsqkscZmtcccwfNNOAPJmvx\nykeCp8iisqlJPTWDqlXsMJ/5fMG6XpPO6DTmjZzxABiATBx4xrYBsdDX7QklkFUm\nf6Ugryg/4yrJ+R0HMloo94A9KddaMIbQI0NqHLwrnORtQGuTvNMvyt6u9LPN/Mcw\nKXTfA1BbaeE6KM7zPr0VNPBSglGIhleZCENM1blfuYfLElsAK+NJlS3juQQik55+\nV23BIj+/iZSmlhpsHPxm8fWOMrApuqltPjdqurNIFQKBgQD8KAE1KLc4luvevotW\nsP5vLLw2RT1pOrRrN38UFl63LPBolvDZxN5b8dmT+ouMy5ytwoICxuEKpSg8LvP5\nVq9uAyE2SoF1HHAaG52VlbhztVSJPyIuSbsCZffhFzXEbfo3OQHBxahWpY2qOwbA\ndcMjhSOmV9pLGMmoiLpMtwVQBQKBgQDPNXWAqk4p34ucMeYVVrYSKirvfNHtAcdP\nfBWdsoCfYAqAFSkXWoRZSmGprwd3V7NYw2U469hH3XDVBTH+hH1diEcMJ2/Fn/h4\nIZ8k66BJfJE1oJ+I7czsEq8XirSpXVf4I3+8L7ug17eZ7nDbmXol3XBUpejPDrbp\n/OBpsM1sRwKBgQCV7VdiezYNwLa4N0V0I0L1aXzzK9Iq2kviIBpAIFjqwx6ioXTN\lt+7fZ6n/OWyrnIXYrqY2hV+ldrJhgVscJ1YZSX/OOemcWU6MMdO5LnKmruL62zw\nZsh50ZVEUd+XTujiotOnmlXQRxlnaTdHgf2oBga/ZicWVcO5oKpc6MmQ3QKBgQCD\ncREBtobwzwq74Xdnz+KdcTxdQRvVscwiIr9/kq0+7GicyU+Qre3IyoNbZVliHjL5\nurFqQ0mmhNU/fBUztA3mmD0he57OiWTPp9xRSlsaYremgibRcLAOjOefEnD6Aul7\n0eEEmm72YADq17Olyh0PCgJo3/nn5xinI6+ju/EDnwKBgQDw5oKaJ1fjue8eM9Qp\nrgSUw8hGqfI7F5uRPUQttEU7lsq8KB3n8lBZGviauUTal9nahPFl/+5pfi8SZYCM\nIJLnXj+/8nDMIgx5nP3zbvHiyih5MnYH1dq1yAtPJxwc4zMv6VnKZD0kJQYBDlYC\nGDXapj1+9RAsgbxxODqArelChg==\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-fbsvc@tradepilot-6c.iam.gserviceaccount.com","client_id":"118194619413784328306","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tradepilot-6c.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+2026-03-13 17:29:19,046 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 19:28:33,202 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:28:34,795 - trading_bot - ERROR - Error parsing FIREBASE_SERVICE_ACCOUNT_JSON as JSON: Invalid \escape: line 1 column 1346 (char 1345)
+2026-03-13 19:28:34,795 - trading_bot - WARNING - Firebase credentials file not found at {"type":"service_account","project_id":"tradepilot-6c","private_key_id":"94f8d9d9832300ad1bc247bd694211d74e2dbf59","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMGQD/QDsJHRw7\nbN0DYIMdtm2Rft3TRsHVss153T/DFJTj1Q5BSl6hIEHb1yrbMeKHHDaQsHpVdtQm\nKBE9XCh/8j5eA/2Ea1FzcSy11qAPdbLYOdYQHif//yfwGOJtO4B5FfLE20cw7kq7\n65HCVzWjDL3wTmna5gp2fH+dZylgMVDUe52xc1QjOnfvGurSWuoOyaOPulGUSaI3\n92I/GavLQ5xdoSDdSRnq6FeUHUwbUd2wArXrns/UxOz6Uj3JvlWVz0l5QmnAcrxp\n+sRkXKPaZ/rQIBzk3ZFO2tSV8isKpAKr43/P5dO8TkGJtqaKQA0+CUGNVASa0mLk\ncM6EPE1jAgMBAAECggEAA99flPhHhns+a2Q751H/+uLYvl99XwJjMCZV3r+Tc6Si\n1JXY0OVT2VPO3Bh/kCwoo66l3GX01EVObjDpbtQeUpsqkscZmtcccwfNNOAPJmvx\nykeCp8iisqlJPTWDqlXsMJ/5fMG6XpPO6DTmjZzxABiATBx4xrYBsdDX7QklkFUm\nf6Ugryg/4yrJ+R0HMloo94A9KddaMIbQI0NqHLwrnORtQGuTvNMvyt6u9LPN/Mcw\nKXTfA1BbaeE6KM7zPr0VNPBSglGIhleZCENM1blfuYfLElsAK+NJlS3juQQik55+\nV23BIj+/iZSmlhpsHPxm8fWOMrApuqltPjdqurNIFQKBgQD8KAE1KLc4luvevotW\nsP5vLLw2RT1pOrRrN38UFl63LPBolvDZxN5b8dmT+ouMy5ytwoICxuEKpSg8LvP5\nVq9uAyE2SoF1HHAaG52VlbhztVSJPyIuSbsCZffhFzXEbfo3OQHBxahWpY2qOwbA\ndcMjhSOmV9pLGMmoiLpMtwVQBQKBgQDPNXWAqk4p34ucMeYVVrYSKirvfNHtAcdP\nfBWdsoCfYAqAFSkXWoRZSmGprwd3V7NYw2U469hH3XDVBTH+hH1diEcMJ2/Fn/h4\nIZ8k66BJfJE1oJ+I7czsEq8XirSpXVf4I3+8L7ug17eZ7nDbmXol3XBUpejPDrbp\n/OBpsM1sRwKBgQCV7VdiezYNwLa4N0V0I0L1aXzzK9Iq2kviIBpAIFjqwx6ioXTN\lt+7fZ6n/OWyrnIXYrqY2hV+ldrJhgVscJ1YZSX/OOemcWU6MMdO5LnKmruL62zw\nZsh50ZVEUd+XTujiotOnmlXQRxlnaTdHgf2oBga/ZicWVcO5oKpc6MmQ3QKBgQCD\ncREBtobwzwq74Xdnz+KdcTxdQRvVscwiIr9/kq0+7GicyU+Qre3IyoNbZVliHjL5\nurFqQ0mmhNU/fBUztA3mmD0he57OiWTPp9xRSlsaYremgibRcLAOjOefEnD6Aul7\n0eEEmm72YADq17Olyh0PCgJo3/nn5xinI6+ju/EDnwKBgQDw5oKaJ1fjue8eM9Qp\nrgSUw8hGqfI7F5uRPUQttEU7lsq8KB3n8lBZGviauUTal9nahPFl/+5pfi8SZYCM\nIJLnXj+/8nDMIgx5nP3zbvHiyih5MnYH1dq1yAtPJxwc4zMv6VnKZD0kJQYBDlYC\nGDXapj1+9RAsgbxxODqArelChg==\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-fbsvc@tradepilot-6c.iam.gserviceaccount.com","client_id":"118194619413784328306","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tradepilot-6c.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+2026-03-13 19:28:36,067 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:28:37,318 - trading_bot - ERROR - Error parsing FIREBASE_SERVICE_ACCOUNT_JSON as JSON: Invalid \escape: line 1 column 1346 (char 1345)
+2026-03-13 19:28:37,318 - trading_bot - WARNING - Firebase credentials file not found at {"type":"service_account","project_id":"tradepilot-6c","private_key_id":"94f8d9d9832300ad1bc247bd694211d74e2dbf59","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMGQD/QDsJHRw7\nbN0DYIMdtm2Rft3TRsHVss153T/DFJTj1Q5BSl6hIEHb1yrbMeKHHDaQsHpVdtQm\nKBE9XCh/8j5eA/2Ea1FzcSy11qAPdbLYOdYQHif//yfwGOJtO4B5FfLE20cw7kq7\n65HCVzWjDL3wTmna5gp2fH+dZylgMVDUe52xc1QjOnfvGurSWuoOyaOPulGUSaI3\n92I/GavLQ5xdoSDdSRnq6FeUHUwbUd2wArXrns/UxOz6Uj3JvlWVz0l5QmnAcrxp\n+sRkXKPaZ/rQIBzk3ZFO2tSV8isKpAKr43/P5dO8TkGJtqaKQA0+CUGNVASa0mLk\ncM6EPE1jAgMBAAECggEAA99flPhHhns+a2Q751H/+uLYvl99XwJjMCZV3r+Tc6Si\n1JXY0OVT2VPO3Bh/kCwoo66l3GX01EVObjDpbtQeUpsqkscZmtcccwfNNOAPJmvx\nykeCp8iisqlJPTWDqlXsMJ/5fMG6XpPO6DTmjZzxABiATBx4xrYBsdDX7QklkFUm\nf6Ugryg/4yrJ+R0HMloo94A9KddaMIbQI0NqHLwrnORtQGuTvNMvyt6u9LPN/Mcw\nKXTfA1BbaeE6KM7zPr0VNPBSglGIhleZCENM1blfuYfLElsAK+NJlS3juQQik55+\nV23BIj+/iZSmlhpsHPxm8fWOMrApuqltPjdqurNIFQKBgQD8KAE1KLc4luvevotW\nsP5vLLw2RT1pOrRrN38UFl63LPBolvDZxN5b8dmT+ouMy5ytwoICxuEKpSg8LvP5\nVq9uAyE2SoF1HHAaG52VlbhztVSJPyIuSbsCZffhFzXEbfo3OQHBxahWpY2qOwbA\ndcMjhSOmV9pLGMmoiLpMtwVQBQKBgQDPNXWAqk4p34ucMeYVVrYSKirvfNHtAcdP\nfBWdsoCfYAqAFSkXWoRZSmGprwd3V7NYw2U469hH3XDVBTH+hH1diEcMJ2/Fn/h4\nIZ8k66BJfJE1oJ+I7czsEq8XirSpXVf4I3+8L7ug17eZ7nDbmXol3XBUpejPDrbp\n/OBpsM1sRwKBgQCV7VdiezYNwLa4N0V0I0L1aXzzK9Iq2kviIBpAIFjqwx6ioXTN\lt+7fZ6n/OWyrnIXYrqY2hV+ldrJhgVscJ1YZSX/OOemcWU6MMdO5LnKmruL62zw\nZsh50ZVEUd+XTujiotOnmlXQRxlnaTdHgf2oBga/ZicWVcO5oKpc6MmQ3QKBgQCD\ncREBtobwzwq74Xdnz+KdcTxdQRvVscwiIr9/kq0+7GicyU+Qre3IyoNbZVliHjL5\nurFqQ0mmhNU/fBUztA3mmD0he57OiWTPp9xRSlsaYremgibRcLAOjOefEnD6Aul7\n0eEEmm72YADq17Olyh0PCgJo3/nn5xinI6+ju/EDnwKBgQDw5oKaJ1fjue8eM9Qp\nrgSUw8hGqfI7F5uRPUQttEU7lsq8KB3n8lBZGviauUTal9nahPFl/+5pfi8SZYCM\nIJLnXj+/8nDMIgx5nP3zbvHiyih5MnYH1dq1yAtPJxwc4zMv6VnKZD0kJQYBDlYC\nGDXapj1+9RAsgbxxODqArelChg==\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-fbsvc@tradepilot-6c.iam.gserviceaccount.com","client_id":"118194619413784328306","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tradepilot-6c.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+2026-03-13 19:28:37,407 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 19:32:00,492 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:32:03,867 - trading_bot - ERROR - Error parsing FIREBASE_SERVICE_ACCOUNT_JSON as JSON: Invalid \escape: line 1 column 1346 (char 1345)
+2026-03-13 19:32:03,868 - trading_bot - WARNING - Firebase credentials file not found at {"type":"service_account","project_id":"tradepilot-6c","private_key_id":"94f8d9d9832300ad1bc247bd694211d74e2dbf59","private_key":"-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQDMGQD/QDsJHRw7\nbN0DYIMdtm2Rft3TRsHVss153T/DFJTj1Q5BSl6hIEHb1yrbMeKHHDaQsHpVdtQm\nKBE9XCh/8j5eA/2Ea1FzcSy11qAPdbLYOdYQHif//yfwGOJtO4B5FfLE20cw7kq7\n65HCVzWjDL3wTmna5gp2fH+dZylgMVDUe52xc1QjOnfvGurSWuoOyaOPulGUSaI3\n92I/GavLQ5xdoSDdSRnq6FeUHUwbUd2wArXrns/UxOz6Uj3JvlWVz0l5QmnAcrxp\n+sRkXKPaZ/rQIBzk3ZFO2tSV8isKpAKr43/P5dO8TkGJtqaKQA0+CUGNVASa0mLk\ncM6EPE1jAgMBAAECggEAA99flPhHhns+a2Q751H/+uLYvl99XwJjMCZV3r+Tc6Si\n1JXY0OVT2VPO3Bh/kCwoo66l3GX01EVObjDpbtQeUpsqkscZmtcccwfNNOAPJmvx\nykeCp8iisqlJPTWDqlXsMJ/5fMG6XpPO6DTmjZzxABiATBx4xrYBsdDX7QklkFUm\nf6Ugryg/4yrJ+R0HMloo94A9KddaMIbQI0NqHLwrnORtQGuTvNMvyt6u9LPN/Mcw\nKXTfA1BbaeE6KM7zPr0VNPBSglGIhleZCENM1blfuYfLElsAK+NJlS3juQQik55+\nV23BIj+/iZSmlhpsHPxm8fWOMrApuqltPjdqurNIFQKBgQD8KAE1KLc4luvevotW\nsP5vLLw2RT1pOrRrN38UFl63LPBolvDZxN5b8dmT+ouMy5ytwoICxuEKpSg8LvP5\nVq9uAyE2SoF1HHAaG52VlbhztVSJPyIuSbsCZffhFzXEbfo3OQHBxahWpY2qOwbA\ndcMjhSOmV9pLGMmoiLpMtwVQBQKBgQDPNXWAqk4p34ucMeYVVrYSKirvfNHtAcdP\nfBWdsoCfYAqAFSkXWoRZSmGprwd3V7NYw2U469hH3XDVBTH+hH1diEcMJ2/Fn/h4\nIZ8k66BJfJE1oJ+I7czsEq8XirSpXVf4I3+8L7ug17eZ7nDbmXol3XBUpejPDrbp\n/OBpsM1sRwKBgQCV7VdiezYNwLa4N0V0I0L1aXzzK9Iq2kviIBpAIFjqwx6ioXTN\lt+7fZ6n/OWyrnIXYrqY2hV+ldrJhgVscJ1YZSX/OOemcWU6MMdO5LnKmruL62zw\nZsh50ZVEUd+XTujiotOnmlXQRxlnaTdHgf2oBga/ZicWVcO5oKpc6MmQ3QKBgQCD\ncREBtobwzwq74Xdnz+KdcTxdQRvVscwiIr9/kq0+7GicyU+Qre3IyoNbZVliHjL5\nurFqQ0mmhNU/fBUztA3mmD0he57OiWTPp9xRSlsaYremgibRcLAOjOefEnD6Aul7\n0eEEmm72YADq17Olyh0PCgJo3/nn5xinI6+ju/EDnwKBgQDw5oKaJ1fjue8eM9Qp\nrgSUw8hGqfI7F5uRPUQttEU7lsq8KB3n8lBZGviauUTal9nahPFl/+5pfi8SZYCM\nIJLnXj+/8nDMIgx5nP3zbvHiyih5MnYH1dq1yAtPJxwc4zMv6VnKZD0kJQYBDlYC\nGDXapj1+9RAsgbxxODqArelChg==\n-----END PRIVATE KEY-----\n","client_email":"firebase-adminsdk-fbsvc@tradepilot-6c.iam.gserviceaccount.com","client_id":"118194619413784328306","auth_uri":"https://accounts.google.com/o/oauth2/auth","token_uri":"https://oauth2.googleapis.com/token","auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs","client_x509_cert_url":"https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-fbsvc%40tradepilot-6c.iam.gserviceaccount.com","universe_domain":"googleapis.com"}
+2026-03-13 19:42:11,241 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:42:11,266 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:42:14,131 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 19:42:14,131 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 19:42:14,143 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 19:53:00,314 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:53:01,789 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 19:53:02,842 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:53:04,033 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 19:53:04,118 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 19:57:30,859 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:58:39,573 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 19:58:39,931 - trading_bot - ERROR - Error initializing Supabase client: Client.__init__() got an unexpected keyword argument 'proxy'
+2026-03-13 20:00:12,247 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:00:31,555 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:00:57,009 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:00:58,097 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:00:58,102 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 20:04:37,721 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 20:04:40,719 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:04:42,221 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:04:42,228 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 20:10:40,755 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 20:12:18,666 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:12:21,843 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:12:24,388 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:12:27,188 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:12:27,360 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 20:13:33,055 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 20:17:08,935 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:17:12,461 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:18:45,933 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:18:48,632 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:18:51,126 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 20:18:53,645 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 20:18:53,814 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 20:21:20,530 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 21:12:08,525 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:12:11,477 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:12:14,092 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:12:17,493 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:12:17,708 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 21:21:24,409 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:21:30,138 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:21:32,766 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:21:35,626 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:21:35,813 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 21:22:04,406 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:04,407 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:09,793 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:09,794 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:15,555 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:15,556 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:20,712 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:20,713 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:26,478 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:26,479 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:31,639 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:31,639 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:37,052 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:37,053 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:42,525 - trading_bot - ERROR - Supabase API error while fetching orders for user IJzReu6CBLOGeplLSMREenQuJV93: {'message': "Could not find the table 'public.orders' in the schema cache", 'code': 'PGRST205', 'hint': None, 'details': None}
+2026-03-13 21:22:42,526 - trading_bot - ERROR - Infrastructure error in get_orders: Supabase orders table is missing. Run backend/supabase/orders_schema.sql in the Supabase SQL editor.
+2026-03-13 21:22:53,929 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 21:25:31,307 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:25:34,298 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:25:36,785 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:25:39,286 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:25:39,444 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 21:35:07,457 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:35:10,405 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:35:13,085 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:35:16,101 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:35:16,270 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 21:36:24,482 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT BUY order for BTCUSDT
+2026-03-13 21:36:24,482 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:36:24,616 - trading_bot - ERROR - Supabase API error while saving order: {'message': 'new row violates row-level security policy for table "orders"', 'code': '42501', 'hint': None, 'details': None}
+2026-03-13 21:36:24,616 - trading_bot - ERROR - TradingService Error: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:24,616 - trading_bot - ERROR - Infrastructure error in create_order: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:33,539 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT BUY order for BTCUSDT
+2026-03-13 21:36:33,539 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:36:33,705 - trading_bot - ERROR - Supabase API error while saving order: {'message': 'new row violates row-level security policy for table "orders"', 'code': '42501', 'hint': None, 'details': None}
+2026-03-13 21:36:33,705 - trading_bot - ERROR - TradingService Error: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:33,705 - trading_bot - ERROR - Infrastructure error in create_order: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:39,917 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT BUY order for BTCUSDT
+2026-03-13 21:36:39,919 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:36:39,981 - trading_bot - ERROR - Supabase API error while saving order: {'message': 'new row violates row-level security policy for table "orders"', 'code': '42501', 'hint': None, 'details': None}
+2026-03-13 21:36:39,981 - trading_bot - ERROR - TradingService Error: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:39,981 - trading_bot - ERROR - Infrastructure error in create_order: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:43,847 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT BUY order for BTCUSDT
+2026-03-13 21:36:43,849 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:36:43,911 - trading_bot - ERROR - Supabase API error while saving order: {'message': 'new row violates row-level security policy for table "orders"', 'code': '42501', 'hint': None, 'details': None}
+2026-03-13 21:36:43,912 - trading_bot - ERROR - TradingService Error: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:43,913 - trading_bot - ERROR - Infrastructure error in create_order: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:47,213 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT SELL order for BTCUSDT
+2026-03-13 21:36:47,213 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:36:47,288 - trading_bot - ERROR - Supabase API error while saving order: {'message': 'new row violates row-level security policy for table "orders"', 'code': '42501', 'hint': None, 'details': None}
+2026-03-13 21:36:47,288 - trading_bot - ERROR - TradingService Error: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:36:47,288 - trading_bot - ERROR - Infrastructure error in create_order: Supabase failed to save the order: new row violates row-level security policy for table "orders"
+2026-03-13 21:40:50,519 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 21:40:56,410 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:40:59,119 - trading_bot - WARNING - Using legacy SUPABASE_KEY for backend database access. If this is the anon key, Supabase RLS will block inserts. Set SUPABASE_SERVICE_ROLE_KEY in backend/.env for server-side writes.
+2026-03-13 21:41:00,197 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:41:00,395 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 21:44:10,631 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing MARKET BUY order for BTCUSDT
+2026-03-13 21:44:10,633 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:44:10,764 - trading_bot - ERROR - Supabase API error while saving order: {'message': 'new row violates row-level security policy for table "orders"', 'code': '42501', 'hint': None, 'details': None}
+2026-03-13 21:44:10,764 - trading_bot - ERROR - TradingService Error: Supabase blocked the write with Row Level Security. This backend uses Firebase auth, not Supabase auth, so server-side writes should use SUPABASE_SERVICE_ROLE_KEY instead of the public anon key. If you intentionally want client-scoped RLS, add an INSERT policy for orders.
+2026-03-13 21:44:10,764 - trading_bot - ERROR - Infrastructure error in create_order: Supabase blocked the write with Row Level Security. This backend uses Firebase auth, not Supabase auth, so server-side writes should use SUPABASE_SERVICE_ROLE_KEY instead of the public anon key. If you intentionally want client-scoped RLS, add an INSERT policy for orders.
+2026-03-13 21:45:23,384 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 21:45:33,512 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:45:36,220 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:45:38,740 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:45:41,932 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 21:45:42,120 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 21:46:32,764 - trading_bot - ERROR - Error verifying Firebase token: Token used too early, 1773418592 < 1773418593. Check that your computer's clock is set correctly.
+2026-03-13 21:46:32,765 - trading_bot - WARNING - Invalid or expired token presented: eyJhbGciOi...
+2026-03-13 21:47:09,398 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT BUY order for BTCUSDT
+2026-03-13 21:47:09,399 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:47:09,595 - trading_bot - INFO - Order saved to Supabase: 67daaf18-390f-4556-8c6c-19b77161adb9
+2026-03-13 21:47:23,012 - trading_bot - INFO - User IJzReu6CBLOGeplLSMREenQuJV93 placing LIMIT SELL order for BTCUSDT
+2026-03-13 21:47:23,014 - trading_bot - INFO - MOCK: Order placed for BTCUSDT
+2026-03-13 21:47:23,128 - trading_bot - INFO - Order saved to Supabase: aab7f441-f5f2-4499-b887-6618548cd421
+2026-03-13 21:47:31,990 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 21:58:55,763 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:58:55,764 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 21:58:55,774 - trading_bot - INFO - CLI order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None}
+}
+2026-03-13 21:58:55,775 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.001, 'price': 65000.0, 'mode': 'mock'}
+2026-03-13 21:58:55,775 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'mode': 'mock'}
+2026-03-13 21:58:55,776 - trading_bot - INFO - Binance futures order response: {'orderId': '67a0d1d8-c10c-4667-9dca-f735bf95327c', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'MARKET', 'side': 'BUY', 'origQty': 0.001, 'price': 65000.0, 'avgPrice': 65000.0, 'executedQty': 0.001, 'updateTime': 1773419335776}
+2026-03-13 21:58:55,776 - trading_bot - INFO - Binance futures order response: {'orderId': 'ad106eda-a502-4c77-bb07-3cb951155332', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'LIMIT', 'side': 'SELL', 'origQty': 0.001, 'price': 65000.0, 'avgPrice': 65000.0, 'executedQty': 0.001, 'updateTime': 1773419335776}
+2026-03-13 22:02:03,293 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 22:02:03,302 - trading_bot - INFO - CLI order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002, 'price': None}
+2026-03-13 22:02:03,302 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002, 'price': None, 'mode': 'mock'}
+2026-03-13 22:02:03,303 - trading_bot - INFO - Binance futures order response: {'orderId': 'a84f29c9-3d38-4423-a9c8-23242ce54451', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'MARKET', 'side': 'BUY', 'origQty': 0.002, 'price': 65000.0, 'avgPrice': 65000.0, 'executedQty': 0.002, 'updateTime': 1773419523303}
+2026-03-13 22:02:11,455 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 22:02:11,461 - trading_bot - INFO - CLI order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.002, 'price': 65100.0}
+2026-03-13 22:02:11,461 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.002, 'price': 65100.0, 'mode': 'mock'}
+2026-03-13 22:02:11,461 - trading_bot - INFO - Binance futures order response: {'orderId': '86c544f1-3edf-4d1d-86bb-1a7ede70ffc4', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'LIMIT', 'side': 'SELL', 'origQty': 0.002, 'price': 65100.0, 'avgPrice': 65100.0, 'executedQty': 0.002, 'updateTime': 1773419531461}
+2026-03-13 22:03:43,825 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 22:03:46,589 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 22:03:49,049 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 22:03:51,524 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 22:03:51,678 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 22:16:47,525 - trading_bot - ERROR - Error verifying Firebase token: Token used too early, 1773420407 < 1773420408. Check that your computer's clock is set correctly.
+2026-03-13 22:16:47,526 - trading_bot - WARNING - Invalid or expired token presented: eyJhbGciOi...
+2026-03-13 22:25:08,902 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-13 22:25:12,505 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 22:25:13,636 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 22:25:14,406 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-13 22:25:15,193 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-13 22:25:15,252 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-13 22:30:03,259 - trading_bot - INFO - Shutting down the Binance Trading Bot API...
+2026-03-14 00:19:58,490 - trading_bot - ERROR - Error initializing Firebase Admin SDK: Failed to initialize a certificate credential. Caused by: "Unable to load PEM file. See https://cryptography.io/en/latest/faq/#why-can-t-i-import-my-pem-file for more details. InvalidData(InvalidPadding)". If this is running on Render, confirm that FIREBASE_SERVICE_ACCOUNT_JSON contains valid JSON and that the private_key preserves newline characters.
+2026-03-14 00:30:37,257 - trading_bot - WARNING - Firebase credentials file was not found; authenticated routes will reject requests.
+2026-03-14 00:30:37,258 - trading_bot - WARNING - Firebase Admin SDK is not initialized; token verification cannot proceed.
+2026-03-14 01:07:19,736 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 01:07:24,824 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 01:07:26,998 - trading_bot - INFO - Starting up the Binance Trading Bot API...
+2026-03-14 01:07:27,095 - trading_bot - INFO - Firebase Admin SDK initialized successfully from JSON string.
+2026-03-14 10:49:15,227 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:49:15,240 - trading_bot - INFO - CLI order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None}
+2026-03-14 10:49:15,240 - trading_bot - INFO - Binance futures order request: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001, 'price': None, 'mode': 'mock'}
+2026-03-14 10:49:15,240 - trading_bot - INFO - Binance futures order response: {'orderId': '74a8e012-cbe4-4309-8079-50ff9bff6e7c', 'symbol': 'BTCUSDT', 'status': 'FILLED', 'type': 'MARKET', 'side': 'BUY', 'origQty': 0.001, 'price': 65000.0, 'avgPrice': 65000.0, 'executedQty': 0.001, 'updateTime': 1773465555240}
+2026-03-14 10:49:28,803 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:49:28,894 - trading_bot - INFO - CLI order request: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 2500.0}
+2026-03-14 10:49:28,896 - trading_bot - INFO - Binance futures order request: {'symbol': 'ETHUSDT', 'side': 'SELL', 'type': 'LIMIT', 'quantity': 0.01, 'price': 2500.0, 'mode': 'mock'}
+2026-03-14 10:49:28,898 - trading_bot - INFO - Binance futures order response: {'orderId': '92acc550-b0fe-459b-b983-205f574c974b', 'symbol': 'ETHUSDT', 'status': 'FILLED', 'type': 'LIMIT', 'side': 'SELL', 'origQty': 0.01, 'price': 2500.0, 'avgPrice': 2500.0, 'executedQty': 0.01, 'updateTime': 1773465568898}
+2026-03-14 10:50:33,716 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:50:44,671 - trading_bot - INFO - Binance Client initialized in MOCK mode.
+2026-03-14 10:52:28,608 - trading_bot - INFO - Binance Client initialized in MOCK mode.
